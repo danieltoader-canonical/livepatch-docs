@@ -1,7 +1,7 @@
 ---
 myst:
   html_meta:
-    description: "Day-to-day operation of the Livepatch client."
+    description: "Day-to-day operation of the Livepatch Client."
 ---
 
 
@@ -9,11 +9,11 @@ myst:
 
 # Operations
 
-Day-to-day operation of the Livepatch client.
+Day-to-day operation of the Livepatch Client.
 
 ## In this section
 
-- [Check client status](/client/how-to-guides/operations/check-client-status.md)
+* [Check client status](/client/how-to-guides/operations/check-client-status.md)
 
 ```{toctree}
 :titlesonly:

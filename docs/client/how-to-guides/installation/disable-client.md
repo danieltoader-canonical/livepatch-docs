@@ -1,31 +1,32 @@
 ---
 myst:
   html_meta:
-    description: "How to disable client with Livepatch client."
+    description: "How to disable client with Livepatch Client."
 ---
+
 
 (client-how-to-guides-how-to-disable-the-livepatch-client)=
 
-# How to disable the Livepatch client
+# How to disable the Livepatch Client
 
-In case the livepatch client needs to be disabled, there are several ways of approaching this.
+Several methods are available to disable the Livepatch Client.
 
-If you have access to the system, one way is to disable the livepatch service:
+When direct access to the system is available, disable the Livepatch service:
 
 ```
 sudo snap stop --disable canonical-livepatch
 ```
 
-If direct access to the system is not available, livepatch client can be disabled in two ways:
+When direct access to the system is not available, the Livepatch Client can be disabled in two ways:
 
-- by setting a kernel command line parameter `canonical_livepatch_mode`
-- by writing the mode to the `/var/local/canonical_livepatch_mode` file
+* Set a kernel command line parameter `canonical_livepatch_mode`
+* Write the mode to the `/var/local/canonical_livepatch_mode` file
 
-These two locations are only checked when the livepatch daemon is started (usually at boot).
+These two locations are checked only when the Livepatch daemon is started, typically at boot.
 
 The mode value can be:
 
-- `normal` - the default operation mode, patch information is refreshed regularly and new patches are applied.
-- `no-apply` - patch information is refreshed, but new patches are not applied to the kernel.
-- `no-refresh` - patch information is not refreshed.
-- `stop` - the livepatch daemon will not start.
+* `normal`: The default operation mode. Patch information is refreshed regularly and new patches are applied.
+* `no-apply`: Patch information is refreshed, but new patches are not applied to the kernel.
+* `no-refresh`: Patch information is not refreshed.
+* `stop`: The Livepatch daemon does not start.

@@ -247,13 +247,14 @@ extensions = [
 # Excludes files or directories from processing
 exclude_patterns = [
     "doc-cheat-sheet*",
+    "_dev/*",
     ".venv*",
 ]
 
 # Adds custom CSS files, located remotely or in 'html_static_path'.
-# html_css_files = [
-#     "https://assets.ubuntu.com/v1/d86746ef-cookie_banner.css",
-# ]
+html_css_files = [
+    "css/custom.css",
+]
 
 # Adds custom JavaScript files, located remotely or in 'html_static_path'.
 # html_js_files = [

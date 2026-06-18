@@ -1,7 +1,7 @@
 ---
 myst:
   html_meta:
-    description: "Enable or disable the Livepatch client on your machines."
+    description: "Enable or disable the Livepatch Client on your machines."
 ---
 
 
@@ -9,14 +9,14 @@ myst:
 
 # Installation
 
-Enable or disable the Livepatch client on your machines.
+Enable or disable the Livepatch Client on machines.
 
 ## In this section
 
-- [Enable client](/client/how-to-guides/installation/enable-client.md)
-- [Enable client on Ubuntu Core](/client/how-to-guides/installation/enable-client-on-ubuntu-core.md)
-- [Disable client](/client/how-to-guides/installation/disable-client.md)
-- [Disable Livepatch during startup](/client/how-to-guides/installation/disable-livepatch-during-startup.md)
+* [Enable the client](/client/how-to-guides/installation/enable-client.md)
+* [Enable the client on Ubuntu Core](/client/how-to-guides/installation/enable-client-on-ubuntu-core.md)
+* [Disable the client](/client/how-to-guides/installation/disable-client.md)
+* [Disable Livepatch during startup](/client/how-to-guides/installation/disable-livepatch-during-startup.md)
 
 ```{toctree}
 :titlesonly:
