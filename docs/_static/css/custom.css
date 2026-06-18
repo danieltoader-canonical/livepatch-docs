@@ -1,3 +1,79 @@
-.highlight pre span {
-  color: #111111 !important;
+/* ==========================================================================
+   Accessible, Theme-Aware Pygments Token Configuration
+   ========================================================================== */
+
+/* 1. Define Accessible Color Palettes per Theme */
+:root {
+  /* --- Light Mode Tokens (Passes WCAG AA 4.5:1 on white/light grey) --- */
+  --code-comment: #595959;     /* Deep slate grey */
+  --code-keyword: #0056b3;     /* Rich accessible blue */
+  --code-number: #b30000;      /* Dark crimson */
+  --code-string: #246b24;      /* Forest green */
+  --code-name: #6f42c1;        /* Deep purple */
+  --code-operator: #212529;    /* Near black */
+}
+
+/* Automatically switch variables if system preference or HTML attribute is dark */
+@media (prefers-color-scheme: dark) {
+  :root {
+    /* --- Dark Mode Tokens (Passes WCAG AA 4.5:1 on charcoal/black) --- */
+    --code-comment: #a0a0a0;  /* Soft silver-grey */
+    --code-keyword: #6ea8fe;  /* Electric light blue */
+    --code-number: #ff8585;   /* Pastel coral/red */
+    --code-string: #85ea85;   /* Bright mint green */
+    --code-name: #b18cf5;     /* Soft lavender */
+    --code-operator: #f8f9fa; /* Off-white */
+  }
+}
+
+/* Explicit fallback if your Sphinx theme uses a custom data attribute toggle */
+html[data-theme="dark"] {
+  --code-comment: #a0a0a0;
+  --code-keyword: #6ea8fe;
+  --code-number: #ff8585;
+  --code-string: #85ea85;
+  --code-name: #b18cf5;
+  --code-operator: #f8f9fa;
+}
+
+/* ==========================================================================
+   2. Apply Variables to Pygments Classes
+   ========================================================================== */
+
+/* Comments (c, c1, cm, cp, etc.) */
+.highlight .c, .highlight .ch, .highlight .cm, .highlight .cp,
+.highlight .cpf, .highlight .c1, .highlight .cs {
+  color: var(--code-comment) !important;
+}
+
+/* Keywords (k, kc, kd, kn, kp, kr, kt) */
+.highlight .k, .highlight .kc, .highlight .kd, .highlight .kn,
+.highlight .kp, .highlight .kr, .highlight .kt {
+  color: var(--code-keyword) !important;
+}
+
+/* Numbers (m, mb, mf, mh, mi, mo, il) */
+.highlight .m, .highlight .mb, .highlight .mf, .highlight .mh,
+.highlight .mi, .highlight .mo, .highlight .il {
+  color: var(--code-number) !important;
+}
+
+/* Strings (s, sa, sb, sc, dl, sd, s2, se, sh, si, sx, sr, s1, ss) */
+.highlight .s, .highlight .sa, .highlight .sb, .highlight .sc,
+.highlight .dl, .highlight .sd, .highlight .s2, .highlight .se,
+.highlight .sh, .highlight .si, .highlight .sx, .highlight .sr,
+.highlight .s1, .highlight .ss {
+  color: var(--code-string) !important;
+}
+
+/* Names, Functions, and Classes (na, nb, nc, no, nd, ni, ne, nf, nl, nn, nt, nv) */
+.highlight .na, .highlight .nb, .highlight .nc, .highlight .no,
+.highlight .nd, .highlight .ni, .highlight .ne, .highlight .nf,
+.highlight .nl, .highlight .nn, .highlight .nt, .highlight .nv {
+  color: var(--code-name) !important;
+}
+
+/* Operators & Words (ow, o) */
+.highlight .ow, .highlight .o {
+  color: var(--code-operator) !important;
 }
