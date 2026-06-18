@@ -7,7 +7,34 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
-## [1.0.0] - 2026-06-15
+## [1.0.0] - 2026-06-18
+
+### Added
+
+- Added introductory context and visible `{toctree}` navigation blocks (`:titlesonly:`) across index pages.
+- Added a redirect for the live patching architecture document.
+
+### Changed
+
+- Refactored documentation content for consistency, clarity, and alignment with the documentation gold standard.
+- Standardized heading style to declarative noun-phrase headings and enforced sentence case.
+- Replaced manual index link lists with structured toctree-based navigation and removed hidden toctrees.
+- Restructured release notes pages by replacing collapsible sections with plain headings and simplifying landing-page navigation.
+- Revised `README.md` and the documentation landing page to follow the Diátaxis model and present Livepatch with product-focused context.
+- Improved server explanation and support documentation structure, including clearer diagnostic guidance.
+
+### Fixed
+
+- Corrected capitalization, proper nouns, hyphenation, and redirect target typos.
+- Replaced non-compliant style patterns, including em dashes, contractions, latinisms, weak phrasing, and non-descriptive link text.
+- Enforced Livepatch terminology rules (Livepatch as a proper noun, never a verb) and corrected all `on-premise` usage to `on-premises`.
+- Normalized formatting for commands, file paths, and configuration values using inline code where appropriate.
+- Preserved MyST frontmatter, Sphinx directives, and code blocks while applying structural and style cleanups.
+- Added blank lines after MyST anchors, fixed heading levels in patch management docs, and updated documentation URLs and the custom wordlist.
+- Excluded `_dev/*` from docs processing.
+- Improved code highlighting contrast to resolve pa11y accessibility findings.
+
+## [0.3.0] - 2026-06-15
 
 ### Added
 
